@@ -6,8 +6,12 @@ import json
 url = 'https://api.github.com'
 user = 'e-murij'
 req = requests.get(f'{url}/users/{user}/repos')
+result = {}
+for i in req.json():
+    result[i["name"]] = i["html_url"]
+
 with open('task_1.json', 'w') as f:
-    json.dump(req.json(), f)
+    json.dump(result, f)
 
 # Изучить список открытых API. Найти среди них любое, требующее авторизацию (любого типа).
 # Выполнить запросы к нему, пройдя авторизацию. Ответ сервера записать в файл.
