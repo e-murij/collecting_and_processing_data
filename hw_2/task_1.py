@@ -49,7 +49,7 @@ def parser_hh(vacancy, link):
         html_bs = bs(html.text, 'lxml')
         page_block = html_bs.find('div', {'data-qa': 'pager-block'})
         if not page_block:
-            last_page = '1'
+            last_page = 1
         else:
             last_page = int(page_block.find_all('a', {'class': 'bloko-button'})[-2].getText())
 
