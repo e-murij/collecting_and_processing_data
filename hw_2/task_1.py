@@ -67,7 +67,7 @@ def parser_hh(vacancy, link):
 
 
 link = 'https://novosibirsk.hh.ru'
-vacancy = 'Python'
+vacancy = 'Python Junior'
 
 df = pd.DataFrame(parser_hh(vacancy, link))
-df.to_excel("result_task_1.xlsx", index=False)
+df.to_csv("result_task_1.csv", encoding='utf-8', index=False)
