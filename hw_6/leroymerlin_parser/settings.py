@@ -13,5 +13,6 @@ IMAGES_STORE = 'images'
 ITEM_PIPELINES = {
    'leroymerlin_parser.pipeline.DataBasePipeline': 300,
    'leroymerlin_parser.pipeline.LeroymerlinPhotosPipeline': 200,
+   'leroymerlin_parser.pipeline.LeroymerlinCSVPipeline': 100,
 }
 
